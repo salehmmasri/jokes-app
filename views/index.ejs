@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section style="display: flex; justify-content: space-around;   flex-wrap: wrap;
+    "">
+        <% jokes.forEach(val=>{ %>
+        <div style="width: 400px; margin: 10px;"">
+            <form action="/add" method="post">
+                <input type="text" name='type' value="<%=val.type%>">
+                <br>
+                <input type="text" name='setup' value="<%=val.setup %>">
+
+                <br>
+                <input type="text" name='punchline' value="<%=val.punchline %>">
+
+                <br>
+                <br>
+                <input type="submit" value="add to my jokes list">
+            </form>
+        </div>
+        <%}); %>
+
+    </section>
+</body>
+
+</html>

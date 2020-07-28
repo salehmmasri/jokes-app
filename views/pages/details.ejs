@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <div>
+            <form action="/update/<%=detail.id%>?_method=put" method="post">
+                <input type="text" name='type' value="<%=detail.type%>">
+                <br>
+                <input type="text" name='setup' value="<%=detail.setup%>">
+
+                <br>
+                <input type="text" name='punchline' value="<%=detail.punchline%>">
+
+                <br>
+                <input type="submit" value="update">
+            </form>
+            
+            <form action="/delete/<%=detail.id%>?_method=delete" method="post">
+                <input type="submit" value="delete">
+            </form>
+
+            
+        </div>
+</body>
+</html>
